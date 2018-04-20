@@ -1036,17 +1036,17 @@ a:visited {
 
 
 /** NAV **/
-nav {
-	background-color: black;
-	font-family: 'Comfortaa', sans-serif;
+.bg-dark {
+	background-color: black !important;
 }
 
-.menu-primary-container {
-	margin-left: auto;
+.navbar-brand {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 1.75rem;
 }
 
-.menu-item {
-	padding: 0 10px;
+.navbar-toggler {
+	border: 1px solid white !important;
 }
 
 /** HERO **/
@@ -1077,10 +1077,7 @@ header .logo {
     text-align: center;
 }
 
-.navbar-brand {
-	font-family: 'Kaushan Script', cursive;
-	font-size: 1.75rem;
-}
+
 
 /** ABOUT **/
 #about {

@@ -44,8 +44,13 @@ if ( ! function_exists( 'embrace_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary' => esc_html__( 'Primary', 'embrace' ),
+			'footer_nav' => __( 'Footer Menu', 'mytheme' ), // example of adding a menu location
+            'top_menu' => __( 'Top Menu', 'mytheme' ), // we will be using this top_menu location
 		) );
+
+		//Register Custom Nav Walker
+		require_once 'class-wp-bootstrap-navwalker.php';
+
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments

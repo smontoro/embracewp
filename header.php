@@ -44,49 +44,80 @@
 
 
 
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Embrace</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <?php
+            wp_nav_menu( array(
+              
+              'theme_location' => 'top_menu',
+              'depth'          => 2,
+              'container'      => false,
+              'menu_class'     => 'navbar-nav ml-auto',
+              'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
+              // Process nav menu using our custom nav walker.
+              'walker'         => new WP_Bootstrap_Navwalker(),
+              
+            ) );
+          ?>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<!-- HEADER
   ============================================== -->
-  <nav class="navbar navbar-expand-lg text-light container fixed-top">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="http://a5ebb47b.ngrok.io/">Embrace</a>
+  <!--<div id="main_navbar" class="navbar navbar-expand_md bg-dark">
 
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <div class="container">
 
-    <!-- I the menu (WP admin area) is not set, then the "menu-class" is applied to "container," overwriting the "container_class". -->
+      <a class="navbar-brand text-white" href="#">Embrace</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headerNav" aria-controls="headerNav" aria-expanded="true" arial-label="<?php esc_attr_e( 'Toggle navigation', 'best-reloaded' ); ?>">
+          <span class="fa fa-navicon"></span>
+          <span class="sr-only"><?php esc_html_e( 'Toggle Navigation', 'top_menu' ); ?></span>
+      </button>-->
+
+      <!--<nav class="" id="headerNav" role="navigation" aria-label="Top Menu">
+        <span class="sr-only"><?php esc_html_e( 'Top Menu', 'top_menu' ); ?></span>
 
           <?php
             wp_nav_menu( array(
               
-              'theme_location'  => 'primary',
-              'container'     => 'nav',
-              'container_class' => 'navbar-collapse collapse',
-              'menu_class'    => 'nav navbar-nav ml-auto\\'
+              'theme_location' => 'top_menu',
+              'depth'          => 2,
+              'container'      => false,
+              'menu_class'     => 'navbar-nav mr-auto',
+              'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
+              // Process nav menu using our custom nav walker.
+              'walker'         => new WP_Bootstrap_Navwalker(),
               
             ) );
           ?>
 
+      </nav>
 
-    <!--<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-      <li class="nav-item">
-        <a class="nav-link btn btn-outline-light" href="#">About</a>
-      </li>
-       <li class="nav-item">
-        <a class="nav-link btn btn-outline-light" href="#">Events</a>
-      </li>
-       <li class="nav-item">
-        <a class="nav-link btn btn-outline-light" href="#">Speakers</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link btn btn-outline-light" href="#">Contact</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link btn btn-outline-light px-3" href="http://meghansmith.local/blog/">Blog</a>
-      </li>
-    </ul>-->
-  </div>
-</nav>
+    </div>
+  </div>-->
 
 
 
@@ -95,5 +126,4 @@
 
     
 
-
-    </div>
+</div><!-- /page-->
